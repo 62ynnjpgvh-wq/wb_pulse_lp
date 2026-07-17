@@ -54,7 +54,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdro
 .hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
 .hero h1{font-size:52px;font-weight:800}
 .hero p.lead{margin:22px 0 30px;max-width:520px}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
 .play{display:inline-flex;align-items:center;gap:10px;font-weight:600;color:var(--ink)}
 .play .circle{width:44px;height:44px;border-radius:50%;background:#fff;box-shadow:var(--card-shadow);display:flex;align-items:center;justify-content:center;color:var(--purple)}
 .hero-art{width:100%}
@@ -171,7 +171,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdro
 @media(max-width:900px){.res{grid-template-columns:1fr}}
 
 /* FINAL CTA */
-.final{background:linear-gradient(120deg,var(--deep),var(--purple));color:#fff;text-align:center;border-radius:28px;padding:64px 40px;margin:40px 0}
+.final{background:linear-gradient(120deg,var(--deep),var(--purple));color:#fff;text-align:center;border-radius:28px;padding:64px 40px;margin:0 0 40px}
 .final h2{font-size:34px;margin-bottom:16px}
 .final p{max-width:620px;margin:0 auto 28px;opacity:.9;font-size:18px}
 .final .btn-primary{background:#fff;color:var(--purple)}
@@ -181,7 +181,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdro
 
 /* FOOTER */
 footer{background:#150A31;color:#B7AED4;padding:60px 0 34px;font-size:14.5px}
-.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr;gap:40px}
 footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:18px}
 footer ul{list-style:none;display:flex;flex-direction:column;gap:11px}
 footer a:hover{color:#fff}
@@ -200,15 +200,12 @@ footer a:hover{color:#fff}
       Wikibot Pulse
     </a>
     <nav class="nav-links">
-      <a href="#props">Возможности</a>
-      <a href="#features">Платформа</a>
+      <a href="#features">Возможности</a>
       <a href="#pricing">Тарифы</a>
       <a href="#steps">Как начать</a>
-      <a href="#cases">Кейсы</a>
-      <a href="#res">Ресурсы</a>
     </nav>
     <div class="nav-right">
-      <a class="btn btn-primary" href="#final">Создать AI-агента</a>
+      <a class="btn btn-primary" href="https://app.wikibot.pro">Создать AI-агента</a>
     </div>
   </div>
 </header>
@@ -219,128 +216,48 @@ footer a:hover{color:#fff}
     <div>
       <h1 style="margin-top:18px">AI-аналитика бизнеса на основе реальных запросов клиентов</h1>
       <p class="lead">Обращения в поддержку — ценный источник инсайтов для развития продукта. Wikibot Pulse автоматически выявляет критические проблемы, приоритизирует задачи для команды и мгновенно предлагает готовые решения, превращая поток жалоб в дорожную карту улучшений.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#final">Создать AI-агента</a>
-        <a class="play" href="#final"><span class="circle"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></span>Записаться на демо</a>
-      </div>
     </div>
     <div class="hero-art" id="hero-art"><!-- SVG injected below --></div>
+    <div class="hero-cta" style="grid-column:1/-1;justify-content:center;margin-top:12px">
+      <a class="btn btn-primary" href="https://app.wikibot.pro">Создать AI-агента</a>
+    </div>
   </div>
 </section>
 
 <!-- TRUST -->
 <section class="trust">
   <div class="container">
-    <p>Компании, ориентированные на клиента, доверяют Wikibot Pulse</p>
+    <p>Компании, ориентированные на клиентов, доверяют Wikibot Pulse</p>
     <div class="logos">
-      <span class="logo-chip"><span class="dot"></span>NovaTech</span>
-      <span class="logo-chip"><span class="dot"></span>Retailix</span>
-      <span class="logo-chip"><span class="dot"></span>FinLine</span>
-      <span class="logo-chip"><span class="dot"></span>MedCare</span>
-      <span class="logo-chip"><span class="dot"></span>EduPro</span>
-      <span class="logo-chip"><span class="dot"></span>Logista</span>
+      <span class="logo-chip"><span class="dot"></span>QLean</span>
+      <span class="logo-chip"><span class="dot"></span>Smartavia</span>
+      <span class="logo-chip"><span class="dot"></span>Skillbox</span>
+      <span class="logo-chip"><span class="dot"></span>Смотрим</span>
+      <span class="logo-chip"><span class="dot"></span>Периодика</span>
+      <span class="logo-chip"><span class="dot"></span>Окидоки</span>
     </div>
   </div>
 </section>
 
-<!-- VALUE PROPS -->
-<section id="props">
-  <div class="container center">
-    <h2 style="margin-top:16px;max-width:760px;margin-left:auto;margin-right:auto">Полная картина клиентского опыта в одном окне</h2>
-    <div class="props" style="text-align:left">
-      <div class="prop">
-        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
-        <h3>Единая видимость проблем</h3>
-        <p>Когда клиенты на грани оттока — на кону многое. Wikibot Pulse мгновенно собирает неструктурированные обращения в единую картину, чтобы вы видели всё сразу.</p>
-      </div>
-      <div class="prop">
-        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l6-6 4 4 8-8"/><path d="M21 7v5h-5"/></svg></div>
-        <h3>Обращения → точки роста выручки</h3>
-        <p>Отток из-за предотвратимых проблем — это упущенная прибыль. Находите первопричины и устраняйте их до того, как они приведут к массовым потерям клиентов.</p>
-      </div>
-      <div class="prop">
-        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg></div>
-        <h3>Решения на основе AI</h3>
-        <p>Клиентские отношения — фундамент бизнеса. Данных уже недостаточно: нужен AI, который учитывает всю картину и предлагает готовые рекомендации.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FEATURES TABS -->
-<section id="features" class="features">
+<!-- FEATURES -->
+<section id="features" class="features" style="background:#fff">
   <div class="container center">
     <h2 style="margin-top:16px">Что умеет Wikibot Pulse</h2>
-    <div class="tabs">
-      <button class="tab active" data-t="0">Классификация обращений</button>
-      <button class="tab" data-t="1">Проблемы в продукте</button>
-      <button class="tab" data-t="2">Зоны роста</button>
-      <button class="tab" data-t="3">Проверка гипотез</button>
-    </div>
-
-    <div class="panel active" data-p="0">
-      <div style="text-align:left">
+    <div class="props" style="text-align:left;grid-template-columns:repeat(3,1fr)">
+      <div class="prop">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
         <h3>Интеллектуальная классификация обращений</h3>
         <p>AI-агент проводит глубокий семантический анализ каждого диалога, автоматически определяет категорию проблемы и мгновенно фиксирует данные в вашей Helpdesk-системе — освобождая сотрудников от рутинной разметки тикетов.</p>
-        <a class="btn btn-ghost" href="#final">Создать AI-агента</a>
       </div>
-      <div class="visual"><svg viewBox="0 0 380 240" fill="none"><rect x="20" y="24" width="340" height="40" rx="10" fill="#EDE9FE"/><rect x="34" y="38" width="150" height="12" rx="6" fill="#7C5CFF"/><rect x="300" y="36" width="46" height="16" rx="8" fill="#5B47E0"/><rect x="20" y="80" width="340" height="40" rx="10" fill="#F5F3FF"/><rect x="34" y="94" width="120" height="12" rx="6" fill="#B7AEDA"/><rect x="300" y="92" width="46" height="16" rx="8" fill="#1E9E5A"/><rect x="20" y="136" width="340" height="40" rx="10" fill="#F5F3FF"/><rect x="34" y="150" width="180" height="12" rx="6" fill="#B7AEDA"/><rect x="300" y="148" width="46" height="16" rx="8" fill="#F5A623"/><rect x="20" y="192" width="340" height="30" rx="8" fill="#EDE9FE"/><rect x="34" y="202" width="90" height="10" rx="5" fill="#7C5CFF"/></svg></div>
-    </div>
-
-    <div class="panel" data-p="1">
-      <div style="text-align:left">
+      <div class="prop">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 1 21h22L12 2z"/><path d="M12 9v4"/><circle cx="12" cy="17" r="1" fill="currentColor" stroke="none"/></svg></div>
         <h3>Мгновенное определение проблем в продукте</h3>
         <p>Система выявляет аномалии в потоке обращений. Благодаря визуализированной аналитике вы сразу видите, на каком этапе пользователь сталкивается с трудностями, и устраняете проблемы до того, как они станут массовыми.</p>
-        <a class="btn btn-ghost" href="#final">Смотреть аналитику</a>
       </div>
-      <div class="visual"><svg viewBox="0 0 380 240" fill="none"><polyline points="20,180 70,150 120,160 170,110 220,120 270,60 320,90 360,40" stroke="#5B47E0" stroke-width="3" fill="none"/><circle cx="270" cy="60" r="9" fill="#F5A623"/><path d="M270 34v-14M263 26h14" stroke="#F5A623" stroke-width="2.5" stroke-linecap="round"/><line x1="20" y1="210" x2="360" y2="210" stroke="#E7E3F5" stroke-width="2"/><line x1="20" y1="30" x2="20" y2="210" stroke="#E7E3F5" stroke-width="2"/></svg></div>
-    </div>
-
-    <div class="panel" data-p="2">
-      <div style="text-align:left">
-        <h3>Выявление зон стратегического роста</h3>
-        <p>Сервис находит скрытые потребности клиентов и повторяющиеся запросы на новый функционал. Wikibot Pulse подсвечивает точки развития продукта, которые напрямую влияют на конверсию в продажи и удержание аудитории.</p>
-        <a class="btn btn-ghost" href="#final">Найти точки роста</a>
-      </div>
-      <div class="visual"><svg viewBox="0 0 380 240" fill="none"><rect x="30" y="150" width="46" height="60" rx="6" fill="#EDE9FE"/><rect x="96" y="110" width="46" height="100" rx="6" fill="#C9BEFF"/><rect x="162" y="80" width="46" height="130" rx="6" fill="#7C5CFF"/><rect x="228" y="50" width="46" height="160" rx="6" fill="#5B47E0"/><rect x="294" y="30" width="46" height="180" rx="6" fill="#2D0B5A"/></svg></div>
-    </div>
-
-    <div class="panel" data-p="3">
-      <div style="text-align:left">
+      <div class="prop">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></div>
         <h3>Проверка продуктовых гипотез</h3>
         <p>Объективно измеряйте успех внедрённых фич и исправлений. Отслеживайте динамику обращений по конкретным темам: если после обновления число жалоб в категории снизилось — значит, решение сработало.</p>
-        <a class="btn btn-ghost" href="#final">Проверить гипотезу</a>
-      </div>
-      <div class="visual"><svg viewBox="0 0 380 240" fill="none"><line x1="190" y1="30" x2="190" y2="210" stroke="#E7E3F5" stroke-width="2" stroke-dasharray="5 5"/><text x="120" y="24" fill="#8479aa" font-size="12" font-family="Inter">до</text><text x="250" y="24" fill="#8479aa" font-size="12" font-family="Inter">после</text><polyline points="20,60 70,80 120,70 170,100" stroke="#D64545" stroke-width="3" fill="none"/><polyline points="190,110 240,150 290,170 350,190" stroke="#1E9E5A" stroke-width="3" fill="none"/><line x1="20" y1="210" x2="360" y2="210" stroke="#E7E3F5" stroke-width="2"/></svg></div>
-    </div>
-  </div>
-</section>
-
-<!-- CASE STUDIES -->
-<section id="cases">
-  <div class="container center">
-    <h2 style="margin-top:16px">Результаты, которые приносит Wikibot Pulse</h2>
-    <div class="cases">
-      <div class="case">
-        <div class="brand">Retailix</div>
-        <h3>Retailix сократил отток на 18% за один квартал</h3>
-        <div class="quote">«Раньше мы читали тикеты вручную и всё равно упускали закономерности. Wikibot Pulse показал корневые причины жалоб за минуты — и мы наконец знали, что чинить в первую очередь.»</div>
-        <div class="who"><span class="av">ЕК</span><div><b>Елена Ковалёва</b><span>Head of Customer Care</span></div></div>
-        <div class="stats"><div class="stat"><b>−18%</b><span>снижение оттока</span></div><div class="stat"><b>+12</b><span>пунктов CSAT</span></div></div>
-      </div>
-      <div class="case">
-        <div class="brand">NovaTech</div>
-        <h3>NovaTech анализирует 120K+ обращений по 40 продуктам</h3>
-        <div class="quote">«До Wikibot Pulse получение инсайтов о продукте требовало кучи ручной работы. AI-классификация стала для нас умным инструментом, который реально помогает повышать качество продукта.»</div>
-        <div class="who"><span class="av">ДС</span><div><b>Дмитрий Соколов</b><span>Senior Product Manager</span></div></div>
-        <div class="stats"><div class="stat"><b>+40</b><span>продуктов в анализе</span></div><div class="stat"><b>120K+</b><span>обращений в мес.</span></div></div>
-      </div>
-      <div class="case">
-        <div class="brand">Logista</div>
-        <h3>Как Logista ускорила путь к инсайтам на 98%</h3>
-        <div class="quote">«Даже беглый разбор пары сотен обращений отнимал время, которого у нас нет. Вместо 8 часов уходит 10 минут. Мы сразу видим темы и настроение клиентов.»</div>
-        <div class="who"><span class="av">АМ</span><div><b>Анна Морозова</b><span>Account Manager</span></div></div>
-        <div class="stats"><div class="stat"><b>5 000+</b><span>обращений за 10 мин</span></div><div class="stat"><b>98%</b><span>быстрее к инсайту</span></div></div>
       </div>
     </div>
   </div>
@@ -349,39 +266,7 @@ footer a:hover{color:#fff}
 <!-- BANNER -->
 <section class="banner">
   <div class="container">
-    <h2>Wikibot Pulse используют, чтобы понимать <span class="hl">полный путь клиента</span>, повышать конверсию и активацию, <span class="hl">увеличивать удержание</span> и создавать отличный пользовательский опыт.</h2>
-  </div>
-</section>
-
-<!-- COMPARE -->
-<section>
-  <div class="container center">
-    <h2 style="margin-top:16px">«А нельзя просто использовать ChatGPT?»</h2>
-    <div class="compare" style="text-align:left">
-      <div class="col diy">
-        <span class="tag">Сделать самому</span>
-        <h3>Обычный чат-бот</h3>
-        <ul>
-          <li><span class="m">✕</span> Универсальная обработка данных без учёта специфики поддержки</li>
-          <li><span class="m">✕</span> Нет отдельного слоя отчётности и дашбордов</li>
-          <li><span class="m">✕</span> Результаты сложно воспроизвести и объяснить команде</li>
-          <li><span class="m">✕</span> Только базовый анализ тональности</li>
-          <li><span class="m">✕</span> Нет интеграции с Helpdesk «из коробки»</li>
-        </ul>
-      </div>
-      <div class="vs"><span>VS</span></div>
-      <div class="col buy">
-        <span class="tag">Выбрать решение</span>
-        <h3>Wikibot Pulse</h3>
-        <ul>
-          <li><span class="m">✓</span> Специализация на анализе клиентского опыта</li>
-          <li><span class="m">✓</span> Полная отчётность: дашборды и рекомендации</li>
-          <li><span class="m">✓</span> Воспроизводимые результаты и приоритизация задач</li>
-          <li><span class="m">✓</span> Готовые решения для улучшения продукта</li>
-          <li><span class="m">✓</span> Интеграция с Helpdesk по API-ключу</li>
-        </ul>
-      </div>
-    </div>
+    <h2>Wikibot Pulse используют, чтобы знать <span class="hl">что волнует ваших клиентов</span>, быстро реагировать на проблемы в бизнесе и <span class="hl">системно улучшать ваш продукт</span></h2>
   </div>
 </section>
 
@@ -394,39 +279,39 @@ footer a:hover{color:#fff}
       <div class="plan">
         <h3>Старт</h3>
         <div class="price">5 900 ₽<small>/мес</small></div>
-        <div class="vol">Распознавание 59 000 диалогов</div>
+        <div class="vol">Категоризация 59 000 диалогов</div>
         <ul>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg>Полный доступ к аналитике</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg>AI-рекомендации</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg>Двухуровневый справочник категорий</li>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg>Интеграция с Helpdesk</li>
         </ul>
-        <a class="btn btn-ghost" href="#final">Начать</a>
+        <a class="btn btn-ghost" href="https://app.wikibot.pro">Начать</a>
       </div>
       <div class="plan featured">
         <span class="pill">Популярный</span>
         <h3>Рост</h3>
         <div class="price">24 900 ₽<small>/мес</small></div>
-        <div class="vol">Распознавание 249 000 диалогов</div>
+        <div class="vol">Категоризация 249 000 диалогов</div>
         <ul>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg>Всё из тарифа «Старт»</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg>Приоритизация задач</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg>Проверка продуктовых гипотез</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg>Полный доступ к аналитике</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg>Двухуровневый справочник категорий</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg>Интеграция с Helpdesk</li>
         </ul>
-        <a class="btn btn-primary" href="#final">Начать</a>
+        <a class="btn btn-primary" href="https://app.wikibot.pro">Начать</a>
       </div>
       <div class="plan">
         <h3>Бизнес</h3>
         <div class="price">59 900 ₽<small>/мес</small></div>
-        <div class="vol">Распознавание 599 000 диалогов</div>
+        <div class="vol">Категоризация 599 000 диалогов</div>
         <ul>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg>Всё из тарифа «Рост»</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg>Расширенные лимиты и SLA</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg>Персональный менеджер</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg>Полный доступ к аналитике</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg>Двухуровневый справочник категорий</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12l5 5L20 6"/></svg>Интеграция с Helpdesk</li>
         </ul>
-        <a class="btn btn-ghost" href="#final">Начать</a>
+        <a class="btn btn-ghost" href="https://app.wikibot.pro">Начать</a>
       </div>
     </div>
-    <p class="note">Стоимость анализа одного диалога — 0,1 кредита на всех тарифах.</p>
+    <p class="note">Стоимость категоризации одного диалога — 0,1 кредита на всех тарифах.</p>
   </div>
 </section>
 
@@ -451,55 +336,19 @@ footer a:hover{color:#fff}
         <p>Система анализирует обращения, выявляет критические проблемы, помогает расставлять приоритеты и предлагает готовые решения.</p>
       </div>
     </div>
-    <div style="margin-top:40px"><a class="btn btn-primary" href="#final">Создать AI-агента</a></div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="features" id="faq">
-  <div class="container center">
-    <h2 style="margin-top:16px">Отвечаем на главное</h2>
-    <div class="faq" style="text-align:left">
-      <div class="q"><button>Чем Wikibot Pulse отличается от обычного ChatGPT?<span class="plus">+</span></button><div class="a">ChatGPT даёт базовый анализ тональности, но у него нет выделенного слоя отчётности и стабильности, нужной для аналитики уровня бизнеса. Wikibot Pulse — специализированное решение для клиентского опыта: воспроизводимые результаты, дашборды и автоматические рекомендации, которых нет у универсальных LLM «из коробки».</div></div>
-      <div class="q"><button>Какие источники данных можно подключить?<span class="plus">+</span></button><div class="a">Wikibot Pulse объединяет обращения из вашей Helpdesk-системы в единую картину. Интеграция выполняется по стандартным протоколам — достаточно указать API-ключ, и система начнёт автоматически анализировать тысячи диалогов.</div></div>
-      <div class="q"><button>Как быстро появятся первые инсайты?<span class="plus">+</span></button><div class="a">Это plug-and-play платформа. AI-отчёты выявляют слепые зоны, темы и настроение клиентов практически мгновенно, позволяя перейти от сырых данных к решениям без привычной ручной обработки.</div></div>
-      <div class="q"><button>Поможет ли Wikibot Pulse снизить отток?<span class="plus">+</span></button><div class="a">Да. Система находит ключевые проблемы и «рисковую» тональность во всех обращениях, помогая выбрать самый эффективный путь к действию. Клиенты отмечают заметный рост удовлетворённости после устранения тем, которые подсвечивает AI.</div></div>
-      <div class="q"><button>Сколько стоит анализ?<span class="plus">+</span></button><div class="a">Стоимость анализа одного диалога — 0,1 кредита. Доступны три тарифа: «Старт» (59 000 диалогов, 5 900 ₽/мес), «Рост» (249 000 диалогов, 24 900 ₽/мес) и «Бизнес» (599 000 диалогов, 59 900 ₽/мес).</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- RESOURCES -->
-<section id="res">
-  <div class="container center">
-    <h2 style="margin-top:16px">Материалы из нашего хаба</h2>
-    <div class="res" style="text-align:left">
-      <div class="rcard">
-        <div class="thumb">Текстовая аналитика</div>
-        <div class="body"><span class="tag2">Гайд</span><h3>Что такое анализ текста</h3><p>Метод машинного обучения для поиска инсайтов в открытых текстовых данных — например, в обратной связи клиентов.</p><a href="#final">Узнать больше →</a></div>
-      </div>
-      <div class="rcard">
-        <div class="thumb">Голос клиента</div>
-        <div class="body"><span class="tag2">Статья</span><h3>Voice of Customer</h3><p>Цифровой клиентский опыт — новое поле борьбы брендов. Программа «голоса клиента» критична, чтобы оставаться конкурентоспособным.</p><a href="#final">Узнать больше →</a></div>
-      </div>
-      <div class="rcard">
-        <div class="thumb">Дорожная карта</div>
-        <div class="body"><span class="tag2">Практика</span><h3>От жалоб к roadmap</h3><p>Как превратить поток обращений в приоритизированную дорожную карту улучшений продукта с помощью AI.</p><a href="#final">Узнать больше →</a></div>
-      </div>
-    </div>
+    <div style="margin-top:40px"><a class="btn btn-primary" href="https://app.wikibot.pro">Создать AI-агента</a></div>
   </div>
 </section>
 
 <!-- FINAL CTA -->
-<section id="final">
+<section id="final" style="padding-top:20px">
   <div class="container">
     <div class="final">
       <h2>Познакомьтесь с Wikibot Pulse</h2>
-      <p>Демо — лучший способ оценить платформу и понять, как она закроет ваши задачи по анализу обращений и отчётности.</p>
-      <a class="btn btn-primary" href="#">Создать AI-агента</a>
+      <p>Создать своего агента - лучший способ оценить платформу и понять, как она закроет ваши задачи по анализу обращений и отчётности</p>
+      <a class="btn btn-primary" href="https://app.wikibot.pro">Создать AI-агента</a>
       <div class="links">
-        <a href="#">Записаться на демо</a>
-        <a href="#">Есть вопросы? Напишите нам в Telegram</a>
+        <a href="https://t.me/use_wikibot">Есть вопросы? Напишите нам в Telegram</a>
       </div>
     </div>
   </div>
@@ -513,11 +362,9 @@ footer a:hover{color:#fff}
         <div class="flogo"><span class="mark" style="width:30px;height:30px;border-radius:9px;background:#5B47E0;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="16" height="16" fill="none"><path d="M4 5l7 7-7 7" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5l7 7-7 7" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Wikibot Pulse</div>
         <p style="max-width:280px">AI-аналитика бизнеса на основе реальных запросов клиентов. Превращаем поток обращений в дорожную карту улучшений продукта.</p>
       </div>
-      <div><h4>Продукт</h4><ul><li><a href="#props">Возможности</a></li><li><a href="#features">Платформа</a></li><li><a href="#pricing">Тарифы</a></li><li><a href="#steps">Как начать</a></li></ul></div>
-      <div><h4>Решения</h4><ul><li><a href="#">Анализ обращений</a></li><li><a href="#">Проблемы в продукте</a></li><li><a href="#">Зоны роста</a></li><li><a href="#">Проверка гипотез</a></li></ul></div>
-      <div><h4>Ресурсы</h4><ul><li><a href="#cases">Кейсы</a></li><li><a href="#res">База знаний</a></li><li><a href="#faq">FAQ</a></li><li><a href="#final">Telegram</a></li></ul></div>
+      <div><h4>Продукт</h4><ul><li><a href="#features">Возможности</a></li><li><a href="#pricing">Тарифы</a></li><li><a href="#steps">Как начать</a></li></ul></div>
     </div>
-    <div class="fbottom"><span>2026 © Wikibot Pulse</span><span>Политика конфиденциальности · Условия использования</span></div>
+    <div class="fbottom"><span>2026 © Wikibot Pulse</span><span><a href="https://wikibot.pro/privacy">Политика конфиденциальности</a> · <a href="https://wikibot.pro/terms">Условия использования</a></span></div>
   </div>
 </footer>
 
