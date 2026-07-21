@@ -125,6 +125,21 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdro
 .vs span{width:52px;height:52px;border-radius:50%;background:#fff;box-shadow:var(--card-shadow);display:flex;align-items:center;justify-content:center;border:1px solid var(--line)}
 @media(max-width:900px){.compare{grid-template-columns:1fr}.vs{padding:18px 0}}
 
+/* CAROUSEL */
+.carousel{position:relative;max-width:900px;margin:52px auto 0}
+.car-track{position:relative;border-radius:var(--radius);border:1px solid var(--line);box-shadow:var(--card-shadow);overflow:hidden;background:var(--lav)}
+.car-slide{display:none}
+.car-slide.active{display:block}
+.car-slide img{width:100%;height:auto;display:block}
+.car-btn{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;background:#fff;box-shadow:var(--card-shadow);border:1px solid var(--line);cursor:pointer;font-size:20px;line-height:1;color:var(--purple);z-index:5}
+.car-btn:hover{background:var(--lav-2)}
+.car-prev{left:-20px}
+.car-next{right:-20px}
+@media(max-width:640px){.car-prev{left:6px}.car-next{right:6px}}
+.car-dots{display:flex;justify-content:center;gap:8px;margin-top:22px}
+.car-dot{width:9px;height:9px;border-radius:50%;background:var(--line);border:none;cursor:pointer;padding:0}
+.car-dot.active{background:var(--purple)}
+
 /* PRICING */
 .pricing{background:var(--lav)}
 .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px}
@@ -267,6 +282,26 @@ footer a:hover{color:#fff}
 <section class="banner">
   <div class="container">
     <h2>Wikibot Pulse используют, чтобы знать <span class="hl">что волнует ваших клиентов</span>, быстро реагировать на проблемы в бизнесе и <span class="hl">системно улучшать ваш продукт</span></h2>
+  </div>
+</section>
+
+<!-- CAROUSEL -->
+<section id="screens">
+  <div class="container center">
+    <h2 style="margin-top:16px">Как выглядит Wikibot Pulse изнутри</h2>
+    <div class="carousel">
+      <button class="car-btn car-prev" type="button" aria-label="Предыдущий экран">‹</button>
+      <div class="car-track">
+        <div class="car-slide active"><img src="images/screenshot-1-bots.png" alt="Экран создания AI-агента в Wikibot Pulse"></div>
+        <div class="car-slide"><img src="images/screenshot-2-categories.png" alt="Категории обращений в Wikibot Pulse"></div>
+        <div class="car-slide"><img src="images/screenshot-3-connections.png" alt="Подключения к Helpdesk в Wikibot Pulse"></div>
+        <div class="car-slide"><img src="images/screenshot-4-report.png" alt="Сводный отчёт в Wikibot Pulse"></div>
+        <div class="car-slide"><img src="images/screenshot-5-chart.png" alt="График динамики обращений в Wikibot Pulse"></div>
+        <div class="car-slide"><img src="images/screenshot-6-log.png" alt="Журнал обращений в Wikibot Pulse"></div>
+      </div>
+      <button class="car-btn car-next" type="button" aria-label="Следующий экран">›</button>
+    </div>
+    <div class="car-dots"></div>
   </div>
 </section>
 
@@ -437,6 +472,44 @@ document.querySelectorAll('.tab').forEach(t=>t.addEventListener('click',()=>{
 document.querySelectorAll('.q button').forEach(b=>b.addEventListener('click',()=>{
   b.parentElement.classList.toggle('open');
 }));
+
+// CAROUSEL
+(function(){
+  const carousel = document.querySelector('.carousel');
+  if(!carousel) return;
+  const slides = carousel.querySelectorAll('.car-slide');
+  const dotsWrap = carousel.parentElement.querySelector('.car-dots');
+  let i = 0;
+  const AUTOPLAY_MS = 4500;
+  let timer = null;
+
+  slides.forEach((_, idx) => {
+    const d = document.createElement('button');
+    d.className = 'car-dot' + (idx === 0 ? ' active' : '');
+    d.type = 'button';
+    d.setAttribute('aria-label', 'Экран ' + (idx + 1));
+    d.addEventListener('click', () => { show(idx); restart(); });
+    dotsWrap.appendChild(d);
+  });
+  const dots = dotsWrap.querySelectorAll('.car-dot');
+
+  function show(idx){
+    i = (idx + slides.length) % slides.length;
+    slides.forEach((s, x) => s.classList.toggle('active', x === i));
+    dots.forEach((d, x) => d.classList.toggle('active', x === i));
+  }
+  function next(){ show(i + 1); }
+  function start(){ timer = setInterval(next, AUTOPLAY_MS); }
+  function stop(){ clearInterval(timer); }
+  function restart(){ stop(); start(); }
+
+  carousel.querySelector('.car-prev').addEventListener('click', () => { show(i - 1); restart(); });
+  carousel.querySelector('.car-next').addEventListener('click', () => { show(i + 1); restart(); });
+  carousel.addEventListener('mouseenter', stop);
+  carousel.addEventListener('mouseleave', start);
+
+  start();
+})();
 </script>
 </body>
 </html>
