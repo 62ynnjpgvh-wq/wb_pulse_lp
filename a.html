@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#160B33;background:#FBFAFF;line-height:1.55;-webkit-font-smoothing:antialiased}
+  a{text-decoration:none;color:#5B47E0}
+  a:hover{color:#4835c9}
+  ::selection{background:#DDD5FF}
+  .flt{animation:flt 7s ease-in-out infinite}
+  @keyframes flt{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+  .strip::-webkit-scrollbar{height:8px}
+  .strip::-webkit-scrollbar-thumb{background:#DCD6F5;border-radius:99px}
+</style>
+</helmet>
+<div style="font-family:'Inter',sans-serif;overflow-x:hidden">
+
+  <header style="position:sticky;top:0;z-index:50;background:rgba(251,250,255,.8);backdrop-filter:blur(14px);border-bottom:1px solid #ECE8FA">
+    <div style="max-width:1180px;margin:0 auto;padding:0 24px;height:74px;display:flex;align-items:center;justify-content:space-between">
+      <a href="https://app.wikibot.pro" style="display:flex;align-items:center;gap:11px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px;color:#160B33;letter-spacing:-.02em">
+        <span style="width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,#5B47E0,#7C5CFF);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="19" height="19" fill="none"><path d="M4 5l7 7-7 7" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5l7 7-7 7" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        Wikibot Pulse
+      </a>
+      <nav style="display:flex;gap:30px;font-size:15px;font-weight:500;color:#3a3358">
+        <a href="#features" style="color:#3a3358">Возможности</a>
+        <a href="#pricing" style="color:#3a3358">Тарифы</a>
+        <a href="#steps" style="color:#3a3358">Как начать</a>
+      </nav>
+      <a href="https://app.wikibot.pro" style="display:inline-flex;align-items:center;font-weight:600;font-size:15px;border-radius:999px;padding:12px 22px;background:#5B47E0;color:#fff;box-shadow:0 8px 24px rgba(91,71,224,.28)" style-hover="background:#4835c9;transform:translateY(-1px)">Начать анализ обращений</a>
+    </div>
+  </header>
+
+  <section style="position:relative;padding:84px 24px 56px">
+    <div style="position:absolute;inset:0;background:radial-gradient(760px 420px at 78% -6%,#E9E3FF 0%,rgba(251,250,255,0) 62%),radial-gradient(560px 360px at 8% 8%,#F3E9FF 0%,rgba(251,250,255,0) 60%);pointer-events:none"></div>
+    <div style="position:relative;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:center">
+      <div>
+        <span style="display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.04em;color:#5B47E0;background:#EDE9FE;padding:8px 15px;border-radius:999px"><span style="width:7px;height:7px;border-radius:50%;background:#5B47E0"></span>Wikibot Pulse</span>
+        <h1 style="font-family:'Space Grotesk',sans-serif;font-size:54px;font-weight:700;line-height:1.08;letter-spacing:-.03em;margin:22px 0 0">AI-аналитика бизнеса на основе реальных запросов клиентов</h1>
+        <p style="color:#5C5476;font-size:18.5px;line-height:1.6;margin:24px 0 32px;max-width:540px">Обращения в поддержку — ценный источник инсайтов для развития продукта. Wikibot Pulse автоматически выявляет критические проблемы, приоритизирует задачи для команды и мгновенно предлагает готовые решения, превращая поток жалоб в дорожную карту улучшений.</p>
+        <a href="https://app.wikibot.pro" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:16px;border-radius:999px;padding:16px 30px;background:#5B47E0;color:#fff;box-shadow:0 12px 34px rgba(91,71,224,.3)" style-hover="background:#4835c9;transform:translateY(-2px)">Начать анализ обращений <span style="font-size:18px">→</span></a>
+      </div>
+      <div class="flt" style="position:relative">
+        <div style="position:absolute;inset:-8% -6% -14% -6%;background:linear-gradient(140deg,#7C5CFF,#5B47E0);border-radius:26px;filter:blur(46px);opacity:.28"></div>
+        <div style="position:relative;border-radius:18px;overflow:hidden;border:1px solid #E7E3F5;box-shadow:0 30px 70px rgba(45,11,90,.16);background:#fff">
+          <div style="height:38px;display:flex;align-items:center;gap:7px;padding:0 16px;background:#F5F3FF;border-bottom:1px solid #ECE8FA">
+            <span style="width:11px;height:11px;border-radius:50%;background:#E0D9F5"></span><span style="width:11px;height:11px;border-radius:50%;background:#E0D9F5"></span><span style="width:11px;height:11px;border-radius:50%;background:#E0D9F5"></span>
+          </div>
+          <img src="images/screenshot-5-chart.png" alt="График динамики обращений в Wikibot Pulse" style="width:100%;display:block"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:40px 24px;border-top:1px solid #ECE8FA;border-bottom:1px solid #ECE8FA;background:#F5F3FF">
+    <div style="max-width:1180px;margin:0 auto">
+      <p style="text-align:center;font-weight:600;color:#6b6485;font-size:15px;margin-bottom:26px">Компании, ориентированные на клиентов, доверяют Wikibot Pulse</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:20px 44px">
+        <sc-for list="{{ logos }}" as="logo" hint-placeholder-count="6">
+          <span style="display:flex;align-items:center;gap:9px;font-weight:700;font-size:20px;color:#6b6485;letter-spacing:-.02em"><span style="width:22px;height:22px;border-radius:7px;background:#E0D9F5"></span>{{ logo }}</span>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" style="padding:92px 24px">
+    <div style="max-width:1180px;margin:0 auto">
+      <h2 style="font-family:'Space Grotesk',sans-serif;text-align:center;font-size:40px;font-weight:700;letter-spacing:-.02em">Что умеет Wikibot Pulse</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px">
+        <div style="background:#fff;border:1px solid #ECE8FA;border-radius:22px;padding:34px 30px;box-shadow:0 14px 40px rgba(45,11,90,.05)">
+          <div style="width:56px;height:56px;border-radius:15px;background:linear-gradient(135deg,#EDE9FE,#F5F3FF);display:flex;align-items:center;justify-content:center;color:#5B47E0;margin-bottom:22px"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:600;margin-bottom:12px;letter-spacing:-.01em">Интеллектуальная классификация обращений</h3>
+          <p style="color:#5C5476;font-size:15px;line-height:1.6">Ранее сотрудники прёускали обращения. <span style="color:#160B33;font-weight:600;background:#EDE9FE;padding:1px 5px;border-radius:5px;box-decoration-break:clone;-webkit-box-decoration-break:clone">Теперь AI-агент автоматически определяет категорию проблемы без человеческого фактора</span>. Мгновенно фиксирует данные в вашей Helpdesk-системе — освобождая сотрудников от рутинной разметки тикетов.</p>
+        </div>
+        <div style="background:#fff;border:1px solid #ECE8FA;border-radius:22px;padding:34px 30px;box-shadow:0 14px 40px rgba(45,11,90,.05)">
+          <div style="width:56px;height:56px;border-radius:15px;background:linear-gradient(135deg,#EDE9FE,#F5F3FF);display:flex;align-items:center;justify-content:center;color:#5B47E0;margin-bottom:22px"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 1 21h22L12 2z"/><path d="M12 9v4"/><circle cx="12" cy="17" r="1" fill="currentColor" stroke="none"/></svg></div>
+          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:600;margin-bottom:12px;letter-spacing:-.01em">Мгновенное определение проблем в продукте</h3>
+          <p style="color:#5C5476;font-size:15px;line-height:1.6">Система выявляет аномалии в потоке обращений. Благодаря визуализированной аналитике вы сразу видите, на каком этапе пользователь сталкивается с трудностями, и устраняете проблемы до того, как они станут массовыми.</p>
+        </div>
+        <div style="background:#fff;border:1px solid #ECE8FA;border-radius:22px;padding:34px 30px;box-shadow:0 14px 40px rgba(45,11,90,.05)">
+          <div style="width:56px;height:56px;border-radius:15px;background:linear-gradient(135deg,#EDE9FE,#F5F3FF);display:flex;align-items:center;justify-content:center;color:#5B47E0;margin-bottom:22px"><svg width="27" height="27" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12l3 3 5-6"/></svg></div>
+          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:600;margin-bottom:12px;letter-spacing:-.01em">Проверка продуктовых гипотез</h3>
+          <p style="color:#5C5476;font-size:15px;line-height:1.6">Объективно измеряйте успех внедрённых фич и исправлений. Отслеживайте динамику обращений по конкретным темам: если после обновления число жалоб в категории снизилось — значит, решение сработало.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:24px">
+    <div style="max-width:1180px;margin:0 auto;background:linear-gradient(125deg,#2D0B5A,#5B47E0);border-radius:28px;padding:64px 56px;text-align:center;box-shadow:0 30px 70px rgba(45,11,90,.28)">
+      <h2 style="font-family:'Space Grotesk',sans-serif;color:#fff;font-size:33px;font-weight:700;line-height:1.28;max-width:920px;margin:0 auto;letter-spacing:-.01em">Wikibot Pulse помогает <span style="color:#C9BEFF">системно улучшать ваш продукт.</span> Вы видите, что волнует клиентов, и быстро реагируете на проблемы в бизнесе.</h2>
+    </div>
+  </section>
+
+  <section id="screens" style="padding:92px 0">
+    <div style="max-width:1180px;margin:0 auto;padding:0 24px">
+      <h2 style="font-family:'Space Grotesk',sans-serif;text-align:center;font-size:40px;font-weight:700;letter-spacing:-.02em">Как выглядит Wikibot Pulse изнутри</h2>
+    </div>
+    <div class="strip" style="display:flex;gap:24px;overflow-x:auto;scroll-snap-type:x mandatory;padding:44px max(24px,calc((100vw - 1180px)/2 + 24px)) 20px">
+      <sc-for list="{{ shots }}" as="shot" hint-placeholder-count="6">
+        <div style="scroll-snap-align:center;flex:0 0 720px;max-width:86vw;border-radius:18px;overflow:hidden;border:1px solid #E7E3F5;box-shadow:0 24px 60px rgba(45,11,90,.12);background:#fff">
+          <div style="height:34px;display:flex;align-items:center;gap:6px;padding:0 14px;background:#F5F3FF;border-bottom:1px solid #ECE8FA">
+            <span style="width:10px;height:10px;border-radius:50%;background:#E0D9F5"></span><span style="width:10px;height:10px;border-radius:50%;background:#E0D9F5"></span><span style="width:10px;height:10px;border-radius:50%;background:#E0D9F5"></span>
+          </div>
+          <img src="{{ shot.src }}" alt="{{ shot.alt }}" style="width:100%;display:block"/>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="pricing" style="padding:92px 24px;background:#F5F3FF;border-top:1px solid #ECE8FA;border-bottom:1px solid #ECE8FA">
+    <div style="max-width:1180px;margin:0 auto;text-align:center">
+      <h2 style="font-family:'Space Grotesk',sans-serif;font-size:40px;font-weight:700;letter-spacing:-.02em">Сколько это стоит?</h2>
+      <p style="color:#5C5476;font-size:18px;margin-top:14px;max-width:640px;margin-left:auto;margin-right:auto">Три тарифа с полным доступом к аналитике и рекомендациям. Стоимость анализа одного диалога — 0,1 кредита.</p>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px;text-align:left;align-items:start">
+        <div style="background:#fff;border:1px solid #E7E3F5;border-radius:22px;padding:34px 30px;display:flex;flex-direction:column">
+          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:600">Старт</h3>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:36px;font-weight:700;margin:14px 0 4px">5 900 ₽<small style="font-size:15px;font-weight:500;color:#5C5476"> /мес</small></div>
+          <div style="color:#5C5476;font-size:14.5px;margin-bottom:24px">Категоризация 5 000 диалогов</div>
+          <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:28px">
+            <sc-for list="{{ planFeats }}" as="f" hint-placeholder-count="3"><div style="display:flex;gap:10px;font-size:14.5px;color:#463c68"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E9E5A" stroke-width="2.5" style="flex:0 0 18px"><path d="M5 12l5 5L20 6"/></svg>{{ f }}</div></sc-for>
+          </div>
+          <a href="https://app.wikibot.pro" style="margin-top:auto;text-align:center;font-weight:600;font-size:15px;border-radius:999px;padding:14px;background:transparent;color:#5B47E0;border:1.5px solid #DCD6F5" style-hover="border-color:#5B47E0">Начать</a>
+        </div>
+        <div style="background:#fff;border:1.5px solid #5B47E0;border-radius:22px;padding:34px 30px;display:flex;flex-direction:column;position:relative;box-shadow:0 24px 60px rgba(91,71,224,.18)">
+          <span style="position:absolute;top:-13px;left:30px;background:#5B47E0;color:#fff;font-size:12px;font-weight:600;padding:5px 14px;border-radius:999px">Популярный</span>
+          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:600">Рост</h3>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:36px;font-weight:700;margin:14px 0 4px">24 900 ₽<small style="font-size:15px;font-weight:500;color:#5C5476"> /мес</small></div>
+          <div style="color:#5C5476;font-size:14.5px;margin-bottom:24px">Категоризация 25 000 диалогов</div>
+          <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:28px">
+            <sc-for list="{{ planFeats }}" as="f" hint-placeholder-count="3"><div style="display:flex;gap:10px;font-size:14.5px;color:#463c68"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E9E5A" stroke-width="2.5" style="flex:0 0 18px"><path d="M5 12l5 5L20 6"/></svg>{{ f }}</div></sc-for>
+          </div>
+          <a href="https://app.wikibot.pro" style="margin-top:auto;text-align:center;font-weight:600;font-size:15px;border-radius:999px;padding:14px;background:#5B47E0;color:#fff;box-shadow:0 10px 26px rgba(91,71,224,.3)" style-hover="background:#4835c9">Начать</a>
+        </div>
+        <div style="background:#fff;border:1px solid #E7E3F5;border-radius:22px;padding:34px 30px;display:flex;flex-direction:column">
+          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:21px;font-weight:600">Бизнес</h3>
+          <div style="font-family:'Space Grotesk',sans-serif;font-size:36px;font-weight:700;margin:14px 0 4px">59 900 ₽<small style="font-size:15px;font-weight:500;color:#5C5476"> /мес</small></div>
+          <div style="color:#5C5476;font-size:14.5px;margin-bottom:24px">Категоризация 100 000 диалогов</div>
+          <div style="display:flex;flex-direction:column;gap:12px;margin-bottom:28px">
+            <sc-for list="{{ planFeats }}" as="f" hint-placeholder-count="3"><div style="display:flex;gap:10px;font-size:14.5px;color:#463c68"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1E9E5A" stroke-width="2.5" style="flex:0 0 18px"><path d="M5 12l5 5L20 6"/></svg>{{ f }}</div></sc-for>
+          </div>
+          <a href="https://app.wikibot.pro" style="margin-top:auto;text-align:center;font-weight:600;font-size:15px;border-radius:999px;padding:14px;background:transparent;color:#5B47E0;border:1.5px solid #DCD6F5" style-hover="border-color:#5B47E0">Начать</a>
+        </div>
+      </div>
+      <p style="color:#5C5476;margin-top:26px;font-size:14.5px">Стоимость категоризации одного диалога — 0,1 кредита на всех тарифах.</p>
+    </div>
+  </section>
+
+  <section id="steps" style="padding:92px 24px">
+    <div style="max-width:1180px;margin:0 auto;text-align:center">
+      <h2 style="font-family:'Space Grotesk',sans-serif;font-size:40px;font-weight:700;letter-spacing:-.02em">Запуск за 3 простых шага</h2>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px;text-align:left">
+        <sc-for list="{{ steps }}" as="s" hint-placeholder-count="3">
+          <div style="background:#F5F3FF;border:1px solid #ECE8FA;border-radius:22px;padding:34px 30px">
+            <div style="width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#5B47E0,#7C5CFF);color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:21px;display:flex;align-items:center;justify-content:center;margin-bottom:20px">{{ s.n }}</div>
+            <h3 style="font-family:'Space Grotesk',sans-serif;font-size:18px;font-weight:600;margin-bottom:10px">{{ s.h }}</h3>
+            <p style="color:#5C5476;font-size:14.5px;line-height:1.6">{{ s.p }}</p>
+          </div>
+        </sc-for>
+      </div>
+      <a href="https://app.wikibot.pro" style="display:inline-flex;align-items:center;gap:9px;margin-top:44px;font-weight:600;font-size:16px;border-radius:999px;padding:16px 30px;background:#5B47E0;color:#fff;box-shadow:0 12px 34px rgba(91,71,224,.3)" style-hover="background:#4835c9;transform:translateY(-2px)">Начать анализ обращений <span style="font-size:18px">→</span></a>
+    </div>
+  </section>
+
+  <section style="padding:20px 24px 56px">
+    <div style="max-width:1180px;margin:0 auto;background:linear-gradient(125deg,#2D0B5A,#5B47E0);border-radius:28px;padding:70px 40px;text-align:center;box-shadow:0 30px 70px rgba(45,11,90,.28)">
+      <h2 style="font-family:'Space Grotesk',sans-serif;color:#fff;font-size:36px;font-weight:700;margin-bottom:16px;letter-spacing:-.02em">Познакомьтесь с Wikibot Pulse</h2>
+      <p style="max-width:620px;margin:0 auto 30px;color:rgba(255,255,255,.9);font-size:18px;line-height:1.6">Создать своего агента - лучший способ оценить платформу и понять, как она закроет ваши задачи по анализу обращений и отчётности</p>
+      <a href="https://app.wikibot.pro" style="display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:16px;border-radius:999px;padding:16px 32px;background:#fff;color:#5B47E0" style-hover="background:#f0edff">Начать анализ обращений <span style="font-size:18px">→</span></a>
+      <div style="margin-top:26px"><a href="https://t.me/use_wikibot" style="color:#fff;border-bottom:1px solid rgba(255,255,255,.4);padding-bottom:2px;font-size:15px">Есть вопросы? Напишите нам в Telegram</a></div>
+    </div>
+  </section>
+
+  <footer style="background:#150A31;color:#B7AED4;padding:60px 24px 34px;font-size:14.5px">
+    <div style="max-width:1180px;margin:0 auto">
+      <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:40px">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;color:#fff;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:20px;margin-bottom:14px"><span style="width:30px;height:30px;border-radius:9px;background:linear-gradient(135deg,#5B47E0,#7C5CFF);display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="16" height="16" fill="none"><path d="M4 5l7 7-7 7" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5l7 7-7 7" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Wikibot Pulse</div>
+          <p style="max-width:300px;line-height:1.6">AI-аналитика бизнеса на основе реальных запросов клиентов. Превращаем поток обращений в дорожную карту улучшений продукта.</p>
+        </div>
+        <div>
+          <h4 style="color:#fff;font-size:13px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:18px">Продукт</h4>
+          <div style="display:flex;flex-direction:column;gap:11px">
+            <a href="#features" style="color:#B7AED4">Возможности</a>
+            <a href="#pricing" style="color:#B7AED4">Тарифы</a>
+            <a href="#steps" style="color:#B7AED4">Как начать</a>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid rgba(255,255,255,.12);margin-top:44px;padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-size:13px;color:#8479aa">
+        <span>2026 © Wikibot Pulse</span>
+        <span><a href="https://wikibot.pro/privacy" style="color:#8479aa">Политика конфиденциальности</a> · <a href="https://wikibot.pro/terms" style="color:#8479aa">Условия использования</a></span>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  renderVals() {
+    return {
+      logos: ['QLean','Smartavia','Skillbox','Смотрим','Периодика','Окидоки'],
+      planFeats: ['Полный доступ к аналитике','Двухуровневый справочник категорий','Интеграция с Helpdesk'],
+      shots: [
+        {src:'images/screenshot-1-bots.png', alt:'Экран создания AI-агента в Wikibot Pulse'},
+        {src:'images/screenshot-2-categories.png', alt:'Категории обращений в Wikibot Pulse'},
+        {src:'images/screenshot-3-connections.png', alt:'Подключения к Helpdesk в Wikibot Pulse'},
+        {src:'images/screenshot-4-report.png', alt:'Сводный отчёт в Wikibot Pulse'},
+        {src:'images/screenshot-5-chart.png', alt:'График динамики обращений в Wikibot Pulse'},
+        {src:'images/screenshot-6-log.png', alt:'Журнал обращений в Wikibot Pulse'},
+      ],
+      steps: [
+        {n:'1', h:'Создайте агента и настройте категории', p:'Агент настраивается за несколько кликов. На этапе тестирования доступны все функции платформы, а категории — под специфику вашего продукта.'},
+        {n:'2', h:'Подключите хелпдеск к агенту', p:'Интеграция выполняется по стандартным протоколам — достаточно указать API-ключ вашей Helpdesk-системы.'},
+        {n:'3', h:'Получайте аналитику и рекомендации', p:'Система анализирует обращения, выявляет критические проблемы, помогает расставлять приоритеты и предлагает готовые решения.'},
+      ],
+    };
+  }
+}
+</script>
+</body>
+</html>
