@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wikibot Pulse — автоматическая категоризация обращений в вашем хелпдеске</title>
 <script src="./support.js"></script>
 </head>
 <body>
@@ -20,36 +21,58 @@
   ::selection{background:#E4DEFB}
   .strip::-webkit-scrollbar{height:6px}
   .strip::-webkit-scrollbar-thumb{background:#DAD4C8;border-radius:99px}
+  @media (max-width:800px){
+    .site-header-inner{height:64px!important;padding:0 20px!important}
+    .site-header-nav,.site-header-cta{display:none!important}
+    .hero-section{padding:64px 24px 56px!important}
+    .hero-grid{grid-template-columns:1fr!important;gap:40px!important}
+    .hero-title{font-size:44px!important;line-height:1.04!important}
+    .hero-copy{font-size:17px!important;margin:24px 0 28px!important}
+    .hero-visual{margin-top:4px}
+    .features-section{padding:72px 24px!important}
+    .features-title{font-size:38px!important}
+    .features-grid{grid-template-columns:1fr!important;margin-top:38px!important}
+    .feature-card{padding:30px 0!important;border-right:0!important;border-bottom:1px solid #E4DED2}
+    .feature-card:last-child{border-bottom:0}
+  }
 </style>
 </helmet>
 <div style="font-family:'Inter',sans-serif;overflow-x:hidden;background:#F7F5F1">
 
   <header style="position:sticky;top:0;z-index:50;background:rgba(247,245,241,.82);backdrop-filter:blur(12px);border-bottom:1px solid #E7E2D8">
-    <div style="max-width:1120px;margin:0 auto;padding:0 32px;height:76px;display:flex;align-items:center;justify-content:space-between">
+    <div class="site-header-inner" style="max-width:1120px;margin:0 auto;padding:0 32px;height:76px;display:flex;align-items:center;justify-content:space-between">
       <a href="https://app.wikibot.pro" style="display:flex;align-items:center;gap:11px;font-weight:600;font-size:19px;color:#1F1B17;letter-spacing:-.01em">
         <span style="width:32px;height:32px;border-radius:9px;background:#1F1B17;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="17" height="17" fill="none"><path d="M4 5l7 7-7 7" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 5l7 7-7 7" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
         Wikibot Pulse
       </a>
-      <nav style="display:flex;gap:34px;font-size:15px;font-weight:500;color:#5A554E">
-        <a href="#features" style="color:#5A554E">Возможности</a>
+      <nav class="site-header-nav" style="display:flex;gap:34px;font-size:15px;font-weight:500;color:#5A554E">
+        <a href="#features" style="color:#5A554E">Категоризация</a>
         <a href="#pricing" style="color:#5A554E">Тарифы</a>
         <a href="#steps" style="color:#5A554E">Как начать</a>
       </nav>
-      <a href="https://app.wikibot.pro" style="display:inline-flex;align-items:center;font-weight:500;font-size:15px;border-radius:8px;padding:11px 20px;background:#1F1B17;color:#F7F5F1" style-hover="background:#5B47E0">Начать анализ обращений</a>
+      <a class="site-header-cta" href="https://app.wikibot.pro" style="display:inline-flex;align-items:center;font-weight:500;font-size:15px;border-radius:8px;padding:11px 20px;background:#1F1B17;color:#F7F5F1" style-hover="background:#5B47E0">Создать категоризатор</a>
     </div>
   </header>
 
-  <section style="padding:96px 32px 72px">
-    <div style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center">
+  <section class="hero-section" style="padding:96px 32px 72px">
+    <div class="hero-grid" style="max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center">
       <div>
-        <span style="display:inline-block;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#5B47E0">Wikibot Pulse</span>
-        <h1 style="font-family:'Newsreader',serif;font-size:60px;font-weight:500;line-height:1.06;letter-spacing:-.02em;margin:20px 0 0;color:#1A1613">AI-аналитика бизнеса на основе реальных запросов клиентов</h1>
-        <p style="color:#5A554E;font-size:18.5px;line-height:1.66;margin:28px 0 34px;max-width:520px">Обращения в поддержку — ценный источник инсайтов для развития продукта. Wikibot Pulse автоматически выявляет критические проблемы, приоритизирует задачи для команды и мгновенно предлагает готовые решения, превращая поток жалоб в дорожную карту улучшений.</p>
-        <a href="https://app.wikibot.pro" style="display:inline-flex;align-items:center;gap:9px;font-weight:500;font-size:16px;border-radius:9px;padding:15px 28px;background:#5B47E0;color:#fff" style-hover="background:#4835c9">Начать анализ обращений <span style="font-size:17px">→</span></a>
+        <span style="display:inline-block;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#5B47E0">AI-категоризация обращений</span>
+        <h1 class="hero-title" style="font-family:'Newsreader',serif;font-size:60px;font-weight:500;line-height:1.06;letter-spacing:-.02em;margin:20px 0 0;color:#1A1613">Автоматические категории — прямо в вашем хелпдеске</h1>
+        <p class="hero-copy" style="color:#5A554E;font-size:18.5px;line-height:1.66;margin:28px 0 34px;max-width:560px">Настройте справочник под свой продукт и подключите хелпдеск. Wikibot Pulse определит тему завершённого диалога и вернёт категорию в тег или пользовательское поле — без ручной разметки и переноса рабочего процесса.</p>
+        <div style="display:flex;align-items:center;gap:20px;flex-wrap:wrap">
+          <a href="https://app.wikibot.pro" style="display:inline-flex;align-items:center;gap:9px;font-weight:500;font-size:16px;border-radius:9px;padding:15px 28px;background:#5B47E0;color:#fff" style-hover="background:#4835c9">Создать категоризатор <span style="font-size:17px">→</span></a>
+          <a href="#steps" style="font-weight:500;font-size:15px;color:#5A554E;border-bottom:1px solid #B8B2A6;padding-bottom:2px">Как подключить</a>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:9px 18px;margin-top:24px;color:#726C60;font-size:13.5px">
+          <span>✓ Ваш справочник категорий</span>
+          <span>✓ Простая интеграция</span>
+          <span>✓ Результат внутри хелпдеска</span>
+        </div>
       </div>
-      <div style="position:relative">
+      <div class="hero-visual" style="position:relative">
         <div style="border-radius:12px;overflow:hidden;border:1px solid #E4DED2;box-shadow:0 24px 60px rgba(60,50,30,.12)">
-          <img src="images/screenshot-4-report.png" alt="Сводный отчёт в Wikibot Pulse" style="width:100%;display:block"/>
+          <img src="images/screenshot-3-connections.png" alt="Подключение автоматической категоризации к хелпдеску" style="width:100%;display:block"/>
         </div>
       </div>
     </div>
@@ -66,24 +89,25 @@
     </div>
   </section>
 
-  <section id="features" style="padding:100px 32px">
+  <section id="features" class="features-section" style="padding:100px 32px">
     <div style="max-width:1120px;margin:0 auto">
-      <h2 style="font-family:'Newsreader',serif;font-size:46px;font-weight:500;letter-spacing:-.02em;color:#1A1613;max-width:640px">Что умеет Wikibot Pulse</h2>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border-top:1px solid #E4DED2">
-        <div style="padding:36px 32px 36px 0;border-right:1px solid #E4DED2">
+      <h2 class="features-title" style="font-family:'Newsreader',serif;font-size:46px;font-weight:500;letter-spacing:-.02em;color:#1A1613;max-width:640px">Что умеет Wikibot Pulse</h2>
+      <p style="color:#5A554E;font-size:18px;line-height:1.66;margin-top:18px;max-width:760px">Сначала Pulse берёт на себя категоризацию в привычном процессе поддержки. По мере накопления данных на портале появляется следующий уровень ценности — аналитика обращений и изменений.</p>
+      <div class="features-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:56px;border-top:1px solid #E4DED2">
+        <div class="feature-card" style="padding:36px 32px 36px 0;border-right:1px solid #E4DED2">
           <div style="font-family:'Newsreader',serif;font-size:26px;color:#5B47E0;margin-bottom:20px">01</div>
-          <h3 style="font-size:19px;font-weight:600;margin-bottom:14px;color:#1A1613;letter-spacing:-.01em">Интеллектуальная классификация обращений</h3>
-          <p style="color:#5A554E;font-size:15px;line-height:1.66">Ранее сотрудники прёускали обращения. <span style="color:#1A1613;font-weight:600;box-shadow:inset 0 -8px 0 #E4DEFB">Теперь AI-агент автоматически определяет категорию проблемы без человеческого фактора</span>. Мгновенно фиксирует данные в вашей Helpdesk-системе — освобождая сотрудников от рутинной разметки тикетов.</p>
+          <h3 style="font-size:19px;font-weight:600;margin-bottom:14px;color:#1A1613;letter-spacing:-.01em">Категоризирует по вашему справочнику</h3>
+          <p style="color:#5A554E;font-size:15px;line-height:1.66">Создайте дерево категорий под свой продукт и правила поддержки. <span style="color:#1A1613;font-weight:600;box-shadow:inset 0 -8px 0 #E4DEFB">Pulse анализирует завершённый диалог и единообразно определяет его тему</span>, освобождая сотрудников от ручной разметки.</p>
         </div>
-        <div style="padding:36px 32px;border-right:1px solid #E4DED2">
+        <div class="feature-card" style="padding:36px 32px;border-right:1px solid #E4DED2">
           <div style="font-family:'Newsreader',serif;font-size:26px;color:#5B47E0;margin-bottom:20px">02</div>
-          <h3 style="font-size:19px;font-weight:600;margin-bottom:14px;color:#1A1613;letter-spacing:-.01em">Мгновенное определение проблем в продукте</h3>
-          <p style="color:#5A554E;font-size:15px;line-height:1.66">Система выявляет аномалии в потоке обращений. Благодаря визуализированной аналитике вы сразу видите, на каком этапе пользователь сталкивается с трудностями, и устраняете проблемы до того, как они станут массовыми.</p>
+          <h3 style="font-size:19px;font-weight:600;margin-bottom:14px;color:#1A1613;letter-spacing:-.01em">Возвращает результат в хелпдеск</h3>
+          <p style="color:#5A554E;font-size:15px;line-height:1.66">Подключите HelpDeskEddy или используйте API. Назначенная категория записывается в тег или пользовательское поле, поэтому команда продолжает работать в привычной системе и не переключается между интерфейсами.</p>
         </div>
-        <div style="padding:36px 0 36px 32px">
+        <div class="feature-card" style="padding:36px 0 36px 32px">
           <div style="font-family:'Newsreader',serif;font-size:26px;color:#5B47E0;margin-bottom:20px">03</div>
-          <h3 style="font-size:19px;font-weight:600;margin-bottom:14px;color:#1A1613;letter-spacing:-.01em">Проверка продуктовых гипотез</h3>
-          <p style="color:#5A554E;font-size:15px;line-height:1.66">Объективно измеряйте успех внедрённых фич и исправлений. Отслеживайте динамику обращений по конкретным темам: если после обновления число жалоб в категории снизилось — значит, решение сработало.</p>
+          <h3 style="font-size:19px;font-weight:600;margin-bottom:14px;color:#1A1613;letter-spacing:-.01em">Накапливает данные для аналитики</h3>
+          <p style="color:#5A554E;font-size:15px;line-height:1.66">Журнал категоризированных диалогов постепенно становится базой знаний о проблемах клиентов. На портале Pulse можно анализировать динамику категорий, замечать изменения и переходить от показателя к исходным обращениям.</p>
         </div>
       </div>
     </div>
